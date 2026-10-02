@@ -1,4 +1,5 @@
-password = input("Enter password-")
+from getpass import getpass
+password = getpass("Enter password-")
 score =0
 length= len(password)
 if length >= 12:
@@ -42,9 +43,9 @@ if has_symbol == True :
 else:
     print("Add a symbol")
 if score==5 :
-    print("Strong Passsword")
+    print("Strong Password")
 elif score>=3 :
     print("Medium Password")
 else :
-    print("Weaak Password")
+    print("Weak Password")
 
