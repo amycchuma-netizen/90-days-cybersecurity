@@ -7,13 +7,16 @@ else :
 has_number = False  
 has_uppercase = False
 has_lowercase = False  
+has_symbol = False
 for char in password :
     if char.isdigit():
         has_number = True
     if char.isupper():
-                has_uppercase = True
+         has_uppercase = True
     if char.islower():
-                        has_lowercase =True
+         has_lowercase =True
+    if not char.isalnum():
+        has_symbol= True                     
 if has_number == True:
     print("Has a number")
 else:
@@ -28,3 +31,7 @@ if has_lowercase == True:
     print("Has lowercase")
 else:
     print("Needs a lowercase letter")
+if has_symbol == True :
+    print("Has a symbol")
+else:
+    print("Add a symbol")
