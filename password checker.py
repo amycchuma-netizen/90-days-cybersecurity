@@ -1,7 +1,9 @@
 password = input("Enter password-")
+score =0
 length= len(password)
 if length >= 12:
     print("Long enough")
+    score= score+1
 else :
     print("Password is too short")
 has_number = False  
@@ -19,19 +21,30 @@ for char in password :
         has_symbol= True                     
 if has_number == True:
     print("Has a number")
+    score= score+1
 else:
     print("Add a number")
     
 if has_uppercase == True:
     print("Has uppercase")
+    score= score+1
 else: 
     print("Needs an uppercase letter")
     
 if has_lowercase == True:
     print("Has lowercase")
+    score= score+1
 else:
     print("Needs a lowercase letter")
 if has_symbol == True :
     print("Has a symbol")
+    score= score+1
 else:
     print("Add a symbol")
+if score==5 :
+    print("Strong Passsword")
+elif score>=3 :
+    print("Medium Password")
+else :
+    print("Weaak Password")
+
