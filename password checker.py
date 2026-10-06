@@ -1,6 +1,6 @@
 from getpass import getpass
 password = getpass("Enter password-")
-common_passwords = ["password","iloveyou","Thisismypassword1#","icancreate123#"]
+common_passwords = ["password","iloveyou","thisismypassword1#","icancreate123#"]
 score =0
 length= len(password)
 if length >= 12:
@@ -43,7 +43,7 @@ if has_symbol == True :
     score= score+1
 else:
     print("Add a symbol")
-if password in common_passwords :
+if password.lower() in common_passwords :
     print("This is a very common password")
     print("Weak Password")
 else:
