@@ -1,7 +1,15 @@
 import string
 import secrets
 characters = string.digits +string.ascii_letters +string.punctuation
-password_length =int(input("Enter password length  "))
+while True :
+    try:
+        password_length =int(input("Enter password length greater than 4 :  "))
+        if 4< password_length <64 :
+            break
+        else :
+            print("Password is too small/large!")
+    except ValueError:
+        print("That's not a number!") 
 password=""
 password = password + secrets.choice(string.ascii_uppercase)
 password = password + secrets.choice(string.punctuation)
