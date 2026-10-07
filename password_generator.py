@@ -1,5 +1,6 @@
 import string
 import secrets
+from password_checker import check_password
 characters = string.digits +string.ascii_letters +string.punctuation
 while True :
     try:
@@ -21,7 +22,7 @@ preferred =list(password)
 secrets.SystemRandom().shuffle(preferred)
 final_p="".join(preferred)
 print(final_p)
-
+check_password(final_p)
 
 
 
