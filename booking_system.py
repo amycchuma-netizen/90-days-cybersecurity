@@ -49,7 +49,7 @@ def main_menu():
             break
         elif choice == "1":
                bookings = load_bookings()
-        elif choice == "2":
+        elif choice == "2": 
                total = calculate_fees(bookings)
         elif choice == "3":
             print_report(bookings, total)
