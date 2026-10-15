@@ -1,9 +1,14 @@
 #include <stdio.h>
+#include <ctype.h>
 int main(){
     printf("Welcome to the registration system\n");
     char name [50];
     printf("Enter your name : ");
     scanf("%49s",name);
+   for (int i = 0; name[i] != '\0'; i++)
+    {
+     printf("%c\n", name[i]);
+    }
     int age;
     do
     {
@@ -22,7 +27,7 @@ int main(){
     printf("Enter password: ");
     scanf("%d",&password);
     int pascode;
-    printf("Enter password: ");
+    printf("Confirm password: ");
     scanf("%d",&pascode);
 if (password == pascode)
 { 
