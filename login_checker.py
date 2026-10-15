@@ -7,4 +7,8 @@ with open("login.txt") as file :
             print("Valid ID")
         else:
             print("Invalid ID")
-            
+            #check whether the date and time is correct
+        try:
+            datetime.strptime(parts[2], "%Y-%m-%d")
+        except ValueError:
+            print("Invalid date and time.")
